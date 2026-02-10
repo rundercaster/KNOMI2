@@ -52,7 +52,7 @@ void ui_ScreenPrinting_screen_init(void)
     lv_obj_set_y(ui_img_printing_gif, 120);
     lv_obj_set_align(ui_img_printing_gif, LV_ALIGN_TOP_MID);
     lv_obj_clear_flag(ui_img_printing_gif, LV_OBJ_FLAG_SCROLLABLE);
-    lv_img_set_zoom(ui_img_printing_gif, 64);
+    lv_img_set_zoom(ui_img_printing_gif, 64); // LVGL zoom: 256 = 100%, so 64 = 25% (quarter size)
 
     ui_arc_bg_1 = lv_arc_create(ui_ScreenPrinting);
     lv_obj_set_width(ui_arc_bg_1, 240);
