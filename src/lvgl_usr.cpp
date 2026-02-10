@@ -53,14 +53,10 @@ void lvgl_ui_task(void * parameter) {
     // progress in center if no lis2dw accelerometer data to display
     lv_obj_set_y(ui_label_printing_progress, 0);
     lv_obj_set_align(ui_label_printing_progress, LV_ALIGN_CENTER);
-    // delete unused accelerometer data
-    lv_obj_del(ui_slider_printing_acc_x);
-    lv_obj_del(ui_slider_printing_acc_y);
-    lv_obj_del(ui_slider_printing_acc_z);
-    lv_obj_del(ui_label_printing_acc_x);
-    lv_obj_del(ui_label_printing_acc_y);
-    lv_obj_del(ui_label_printing_acc_z);
 #endif
+
+    // Set initial GIF source on the printing screen
+    lv_gif_set_src(ui_img_printing_gif, &gif_print);
 
     lv_obj_t * label = lv_label_create(ui_ScreenTestImg);
     lv_obj_set_size(label, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
